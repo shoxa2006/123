@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <input type="number" id="input" placeholder="Ikki xonali son">
+    <button onclick="myFunction()">Try it</button>
+    <h1 id="demo"></h1>
+    <input type="number" id="input2" placeholder="Uch xonali son"   >
+    <button onclick="myFunctiontwo()">Try it</button>
+    <h1 id="demo1"></h1>
+    <input type="number" id="input3" placeholder="Tort xonali son">
+    <button onclick="myFunctionthree()">Try it</button>
+    <h1 id="demo2"></h1>
+    <script>
+        function myFunction() {
+            var z = document.getElementById("input");
+            var num = z.value / 10;
+            var str = num.toString();
+            var numarray = str.split('.');
+            var a = new Array();
+            a = numarray;
+            var x = document.getElementById("demo");
+            var first = Number.parseInt(a[0]);
+            var second = Number.parseInt(a[1]);
+            var plus = first + second;
+            x.innerHTML = plus;
+        }
+
+        function myFunctiontwo() {
+            var d = document.getElementById("input2");
+            var n = d.value / 100;
+            var s = n.toString();
+            var narray = s.split('.');
+            var a = new Array();
+            a = narray;
+            var f = document.getElementById("demo1");
+            var firsttwo = Number.parseInt(a[0]);
+            var two = Number.parseInt(a[1]);
+            var three = ((two / 10).toString()).split('.');
+            var b = new Array();
+            b = three;
+            var second = Number.parseInt(b[0]);
+            var third = Number.parseInt(b[1]);
+
+            var plustwo = (firsttwo + second) / third;
+            f.innerHTML = plustwo;
+        }
+        
+
+        function myFunctionthree() {
+            var q = document.getElementById("input3");
+            var w = q.value / 1000;
+            var e = w.toString();
+            var nrray = e.split('.');
+            var a = new Array();
+            a = nrray;
+            var t = document.getElementById("demo2");
+            var firstthree = Number.parseInt(a[0]);
+            var two = Number.parseInt(a[1]);
+            var three = ((two / 100).toString()).split('.');
+            var b = new Array();
+            b = three;
+            var four = Number.parseInt(b[0])
+            var five = Number.parseInt(b[1])
+            var six = ((five / 10).toString()).split('.');
+            var c = new Array();
+            c = six;
+            var thirdtwo = Number.parseInt(c[0]);
+            var fourth = Number.parseInt(c[1]);
+
+            var plustwo = (firstthree + four) * (thirdtwo + fourth);
+            t.innerHTML = plustwo;
+        }
+    </script>
+</body>
+
+</html>
